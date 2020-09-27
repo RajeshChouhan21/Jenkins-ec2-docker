@@ -2,7 +2,7 @@ node('ec2-slave') {
   try {
 	
     stage('Build'){
-	sh 'git clone https://github.com/RajeshChouhan21/Jenkins-ec2-docker.git rajeshgit'
+	sh 'git clone https://github.com/RajeshChouhan21/Jenkins-ec2-docker.git'
 	sh 'cd ./rajeshgit'
 	sh 'ls -ltr'
 	}

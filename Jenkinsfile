@@ -1,4 +1,4 @@
-node('master') {
+node('ec2-slave') {
   try {
 	
     stage('Build'){

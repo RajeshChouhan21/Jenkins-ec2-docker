@@ -7,6 +7,7 @@ node('ec2-slave') {
 	    dir('rajeshgit/'){
 	    sh 'pwd'
 	    sh 'ls -ltr'
+	    sh 'docker build -t webserver .'
 	    }
 	}
     

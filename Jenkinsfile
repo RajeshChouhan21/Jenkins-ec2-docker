@@ -5,6 +5,7 @@ node('ec2-slave') {
 	sh 'rm -rf rajeshgit'
 	sh 'git clone https://github.com/RajeshChouhan21/Jenkins-ec2-docker.git rajeshgit'
 	sh 'cd rajeshgit/'
+	sh 'pwd'
 	sh 'ls -ltr'
 	}
     

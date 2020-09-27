@@ -8,6 +8,7 @@ node('ec2-slave') {
 	    sh 'pwd'
 	    sh 'ls -ltr'
 	    sh 'docker build -t webserver .'
+	    sh 'docker run -it --rm -d -p 8080:80 --name web webserver'
 	    }
 	}
     

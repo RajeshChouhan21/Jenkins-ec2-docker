@@ -4,9 +4,10 @@ node('ec2-slave') {
     stage('Build'){
 	sh 'rm -rf rajeshgit'
 	sh 'git clone https://github.com/RajeshChouhan21/Jenkins-ec2-docker.git rajeshgit'
-	sh 'cd rajeshgit/'
-	sh 'pwd'
-	sh 'ls -ltr'
+	    dir('rajeshgit/'){
+	    sh 'pwd'
+	    sh 'ls -ltr'
+	    }
 	}
     
   } catch(Exception e) {

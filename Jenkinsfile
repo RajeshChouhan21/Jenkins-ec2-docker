@@ -1,15 +1,11 @@
-pipeline {
-    agent none
-
-    stages {
-        stage('Build') {
-            agent { label 'ec2-slave' }
-            steps {
-                echo 'Building..'
-                sh '''pwd
-                '''
-            }
-        }
-    }
-
+node(ec2-slave) {
+  try {
+	
+    stage("Build"){
+	sh "pwd"
+	}
+    
+  } catch(Exception e) {
+    throw e
+  }
 }

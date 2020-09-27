@@ -1,8 +1,8 @@
-node(ec2-slave) {
+node('ec2-slave') {
   try {
 	
-    stage("Build"){
-	sh "pwd"
+    stage('Build'){
+	sh 'pwd'
 	}
     
   } catch(Exception e) {

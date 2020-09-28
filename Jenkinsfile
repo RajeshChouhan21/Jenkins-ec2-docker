@@ -9,7 +9,7 @@ node('ec2-slave') {
 	    sh 'ls -ltr'
 	    sh 'docker build -t webserver .'
 	    sh 'docker ps'
-	    sh 'docker run -it --rm -d -p 80:80 -v /apps/workspace/log:/var/log/nginx --name web webserver'
+	    sh 'docker run -it --rm -d -p 80:80 -v /apps/workspace/log:/var/log/nginx --name web2 webserver'
 	
 
 	    }
